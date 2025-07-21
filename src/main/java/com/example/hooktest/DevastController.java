@@ -18,6 +18,6 @@ public class DevastController {
     String doHook(@RequestBody(required = false) Map<String,Object> body) {
         System.out.println("POST");
         System.out.println(body);
-        return "{\"type\":\"commands\", \"content\": [\"!build=wood_wall:149:149\"]}";
+        return "{\"type\":\"commands\", \"content\": [\"!build=wood_wall:149:149\", \"!item-to=16:wood\"]}";
     }
 }

@@ -1,7 +1,6 @@
 package com.example.hooktest;
 
 
-import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DevastController {
 
     @PostMapping
-    ResponseEntity<Integer> doHook(@RequestBody(required = false) ByteArrayResource body) {
+    ResponseEntity<Integer> doHook(@RequestBody(required = false) String body) {
         System.out.println("POST");
         System.out.println(body);
         return new ResponseEntity<>(HttpStatus.OK);

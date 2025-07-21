@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class DevastController {
 
     @PostMapping
-    ResponseEntity<Integer> doHook(@RequestBody(required = false) String body) {
+    String doHook(@RequestBody(required = false) Object body) {
         System.out.println("POST");
         System.out.println(body);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return "{\"type\":\"commands\", \"content\": [\"!build=wood_wall:149:149\"]}";
     }
 }

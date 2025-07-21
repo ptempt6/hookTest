@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DevastController {
 
     @PostMapping
-    ResponseEntity<Integer> doHook(@RequestBody String body) {
+    ResponseEntity<Integer> doHook(@RequestBody(required = false) String body) {
         System.out.println(body);
         return new ResponseEntity<>(HttpStatus.OK);
     }

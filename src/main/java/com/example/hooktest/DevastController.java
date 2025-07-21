@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/devast")
 public class DevastController {
 
     @PostMapping
-    String doHook(@RequestBody(required = false) Object body) {
+    String doHook(@RequestBody(required = false) Map<String,Object> body) {
         System.out.println("POST");
         System.out.println(body);
         return "{\"type\":\"commands\", \"content\": [\"!build=wood_wall:149:149\"]}";

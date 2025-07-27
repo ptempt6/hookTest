@@ -24,7 +24,7 @@ public class DevastController {
 
 
         //recursivePrint(body);
-       return "{\"type\":\"commands\", \"content\": [\"!build=wood_wall:149:149\"]}";
+       return "{\"type\":\"commands\", \"content\": [\"!build=steel_wall:149:149\"]}";
 
         //return "{ \"type\": \"filter\", \"content\": 0 }";
     }
